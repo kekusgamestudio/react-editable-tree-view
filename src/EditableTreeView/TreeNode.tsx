@@ -112,21 +112,23 @@ export const TreeNode: React.FC<TreeNodeProps> = ({ node, onUpdate, onDelete }) 
                   {/* <Pencil className={styles.icon} /> */}
                 </button>
               </div>
-              <div className={styles.dropdownMenu}>
-                <button className={styles.actionButton} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-                  <CirclePlus className={styles.icon} />
-                </button>
-                {isDropdownOpen && (
-                  <div className={styles.dropdownContent}>
-                    <div className={styles.dropdownItem} onClick={() => handleAddChild("file")}>
-                      Add File
+              {isFolder && (
+                <div className={styles.dropdownMenu}>
+                  <button className={styles.actionButton} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+                    <CirclePlus className={styles.icon} />
+                  </button>
+                  {isDropdownOpen && (
+                    <div className={styles.dropdownContent}>
+                      <div className={styles.dropdownItem} onClick={() => handleAddChild("file")}>
+                        Add File
+                      </div>
+                      <div className={styles.dropdownItem} onClick={() => handleAddChild("folder")}>
+                        Add Folder
+                      </div>
                     </div>
-                    <div className={styles.dropdownItem} onClick={() => handleAddChild("folder")}>
-                      Add Folder
-                    </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
+              )}
               <button className={styles.actionButton} onClick={onDelete}>
                 <Trash2 className={styles.icon} />
               </button>
