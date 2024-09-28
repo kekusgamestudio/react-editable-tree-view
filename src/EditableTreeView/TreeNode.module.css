@@ -1,0 +1,105 @@
+.treeNode {
+  padding-left: 0.5rem;
+  border-left: 1px solid #3a3a3a;
+}
+
+.nodeContent {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0;
+}
+
+.nodeInfo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.folderIcon {
+  color: #eab308;
+}
+
+.fileIcon {
+  color: #3b82f6;
+}
+
+.nodeName {
+  cursor: pointer;
+  margin-left: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.input {
+  height: 1.5rem;
+  width: 20rem;
+  font-size: 0.875rem;
+  padding: 0 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+}
+
+.childrenContainer {
+  padding-left: 1.5rem;
+}
+
+.dropdownMenu {
+  position: relative;
+}
+
+.dropdownContent {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: rgb(96, 96, 96);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  font-size: 13px;
+  z-index: 10;
+}
+
+.dropdownItem {
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #b3b3b3;
+}
